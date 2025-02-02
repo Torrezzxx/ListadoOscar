@@ -1,80 +1,63 @@
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     margin: 0;
-    padding: 10px;
+    padding: 20px;
 }
-
 h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
 }
-
 .table-container {
     display: flex;
-    flex-wrap: nowrap; /* Impede quebra de linha */
-    justify-content: flex-start; /* Alinha horizontalmente */
-    gap: 10px; /* Espaçamento entre as tabelas */
-    overflow-x: auto; /* Adiciona rolagem horizontal em telas menores */
-    padding-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
-
 table {
     border-collapse: collapse;
-    width: 220px; /* Largura fixa */
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    flex-shrink: 0; /* Impede que as tabelas sejam reduzidas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 th, td {
-    padding: 8px 10px;
+    padding: 10px 15px;
     text-align: left;
 }
-
 th {
     background-color: #007bff;
     color: white;
-    text-align: center;
-    font-size: 14px;
 }
-
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+/* Estilos específicos para a coluna de Status */
+td:last-child {
+    text-align: center; /* Centraliza o conteúdo da coluna de Status */
+    width: 120px; /* Largura fixa para a coluna de Status */
+}
+
+/* Estilos para os botões */
 button {
-    padding: 6px 10px;
+    padding: 6px 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 12px;
+    width: 80px; /* Largura fixa para os botões */
+    text-align: center; /* Centraliza o texto dentro do botão */
 }
-
-.pendente {
-    background-color: #dc3545;
-    color: white;
-}
-
 .visto {
     background-color: #28a745;
     color: white;
 }
-
-@media (max-width: 600px) {
-    .table-container {
-        overflow-x: auto; /* Rolagem horizontal no mobile */
-    }
-
-    table {
-        font-size: 14px;
-        flex-shrink: 0; /* Impede a redução no mobile */
-    }
-
-    th, td {
-        padding: 6px 8px;
-    }
+.pendente {
+    background-color: #dc3545;
+    color: white;
+}
